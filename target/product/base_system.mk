@@ -390,8 +390,8 @@ PRODUCT_PACKAGES_DEBUG := \
     unwind_reg_info \
     unwind_symbols \
 
-ifneq ($(AIM_BUILD),)
-PRODUCT_PACKAGES_DEBUG := \
+ifeq ($(AIM_BUILD),)
+PRODUCT_PACKAGES_DEBUG += \
     su
 endif
 
